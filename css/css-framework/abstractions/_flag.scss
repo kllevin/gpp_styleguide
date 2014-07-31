@@ -1,0 +1,87 @@
+/* ======================================================================================
+   @ABSTRACTIONS -> FLAG
+   ====================================================================================== */
+
+/*
+  Place any image- and text-like content side-by-side with vertical alignment.
+
+  .flag--shrink-wrap          - Shrink wrap
+  .flag--gutter-half          - Half gutter between image- and text-like content
+  .flag--rev                  - Reverse the positioning of image- and text-like content
+  .flag--align-top            - Top alignment
+  .flag--align-btm            - Bottom alignment
+
+  Styleguide Flag
+*/
+
+/*
+  Note: same as the 'Slat' abstraction but we get vertical alignment.
+
+  Credit: http://csswizardry.com/2013/05/the-flag-object/
+*/
+
+.flag {
+  display: table;
+  width: 100%;
+}
+
+/* Modifier: turn off at palm size */
+.flag--off-palm {
+  display: block;
+
+  @include respond-min($non-palm) {
+    display: table;
+  }
+}
+
+/* Modifier: center align */
+.flag--align-center {margin: 0 auto;}
+
+/* Modifier: shrink wrap */
+.flag--shrink-wrap {width: auto;}
+
+  .flag__img,
+  .flag__body {
+    display: table-cell;
+    vertical-align: middle;
+
+    /* Modifier: top alignment */
+    .flag--align-top & {vertical-align: top;}
+
+    /* Modifier: bottom alignment */
+    .flag--align-btm & {vertical-align: bottom;}
+
+    /* Modifier: turn off at palm size */
+    .flag--off-palm & {
+      display: block;
+
+      @include respond-min($non-palm) {
+        display: table-cell;
+      }
+    }
+  }
+
+  .flag__img {
+    @include to-rem(padding-right, $spacing-base);
+
+    /* Modifier: half spacing between image- and text-like content */
+    .flag--gutter-half & {@include to-rem(padding-right, $spacing-half);}
+
+    /* Modifier: reverse the positioning of image- and text-like content */
+    .flag--rev & {
+      padding-right: 0;
+      @include to-rem(padding-left, $spacing-base);
+    }
+
+    /* Modifier: half spacing between image- and text-like content when used with 'Reversed' modifier */
+    .flag--rev.flag--gutter-half & {@include to-rem(padding-left, $spacing-half);}
+
+    /* Modifier: turn off at palm size */
+    .flag--off-palm & {
+      padding-right: 0;
+
+      @include respond-min($non-palm) {
+        @include to-rem(padding-right, $spacing-base);
+      }
+    }
+  }

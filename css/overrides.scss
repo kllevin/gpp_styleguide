@@ -1,0 +1,23 @@
+/* ======================================================================================
+   @FRAMEWORK OVERRIDES
+   ====================================================================================== */
+
+/*
+  Note: any variables you find set in css-framework’ '_vars.scss' that you do not wish to keep, simply redefine here. This means that if css-framework, for example, sets your `$font-size` at `14px` and you wish it to be `16px`, simply redeclare it here, see example below. css-framework ignores its own variables in favour of using your own, so you can completely modify how css-framework works without ever having to alter the framework itself. Just make sure to declare your overrides here and do not use the `!default` keyword.
+*/
+
+/* [GRID/LAYOUT]
+-------------------------------------------------------*/
+
+/* Page container min width */
+$page-container-min-width: 280;
+
+/* Page container max width */
+$page-container-max-width: 1200;
+
+
+/* [SPECIFIC BREAKPOINT CLASSES]
+-------------------------------------------------------*/
+
+/* Width classes - mainly used with the grid */
+$width-classes-at-breakpoint-non-palm: true;

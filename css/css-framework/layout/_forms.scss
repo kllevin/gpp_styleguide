@@ -1,0 +1,67 @@
+/* ======================================================================================
+   @LAYOUT -> FORMS
+   ====================================================================================== */
+
+/*
+	Usage: these form layout styles provide the default form layout which is linear i.e. `label` above `input`. As always major layout is handled by the grid e.g. columns.
+
+	For the accessibility implementation see the README: https://github.com/westfield/registered_carpark_ui/blob/master/README.md.
+
+	HTML anatomy:
+		<form>
+			<fieldset>
+				<legend class="form-hdr">Heading</legend>
+				<div class="form-field">
+          <label class="form-field__lbl block" for="input-1">
+            <span class="grid grid--flush">
+              <span class="grid__item one-half">
+                Label <strong class="req-field" title="Required">*</strong>
+              </span>
+              <span class="grid__item one-half">
+                <span class="form-field__msg form-field__msg--help block">Helper notes</span>
+              </span>
+            </span>
+          </label>
+          [input(s)] e.g.
+          <input type="text" id="input-1" class="txt-input">
+          <p class="form-field__msg form-field__msg--validation feedback feedback--inline feedback--error">Error message</p>
+          <p class="form-field__msg form-field__msg--validation feedback feedback--inline feedback--success">Success message</p>
+        </div>
+				....
+				....
+			</fieldset>
+		</form>
+*/
+
+/* Heading - `legend` */
+.form-hdr {
+  /* Add default spacing via `padding` so it works cross browser */
+  @include to-rem(padding-bottom, $spacing-base);
+  margin-bottom: 0;
+}
+
+/* Form field */
+.form-field {
+  @extend %clear-fix;
+
+  /* Resets */
+  p {margin-bottom: 0;}
+
+  /* Make all text inputs full width */
+  .txt-input,
+  textarea,
+  select {width: 100%;}
+}
+
+  /* Shared */
+  .form-field__lbl,
+  .form-field__msg {color: $color-txt-dark;}
+
+  /* Label */
+  .form-field__lbl {@include to-rem(margin-bottom, $spacing-sixth);}
+
+  /* Messages */
+  .form-field__msg {
+    @include font-size($font-size-smler, 1.5);
+    margin-top: to-rem($spacing-micro);
+  }

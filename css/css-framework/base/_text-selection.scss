@@ -1,0 +1,17 @@
+/* ======================================================================================
+   @BASE -> TEXT SELECTION
+   ====================================================================================== */
+
+/* Firefox */
+::-moz-selection {
+	background: $color-brand;
+	color: $color-white;
+	text-shadow: none;
+}
+
+/* Everyone else */
+::selection {
+	background: $color-brand;
+	color: $color-white;
+	text-shadow: none;
+}

@@ -1,0 +1,15 @@
+/* ======================================================================================
+   @LAYOUT -> SITE STRUCTURE -> GLOBAL -> SIDEBAR
+   ====================================================================================== */
+
+.sidebar {
+  position: absolute;
+  z-index: 2;
+  width: 100%;
+  background: $color-grey-dark;
+
+  @include respond-min($header-menu-breakpoint) {
+    width: $sidebar-width;
+    height:100%;
+  }
+}
