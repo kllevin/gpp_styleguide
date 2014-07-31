@@ -4431,7 +4431,7 @@ body {
   left: 0;
   /* Screen media with width */
 }
-@media (min-width: 53.75em) {
+@media (min-width: 56.3125em) {
   .main {
     left: 14rem;
   }
