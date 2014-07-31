@@ -1945,6 +1945,21 @@ th {
   padding: 0.75em;
 }
 
+/* ======================================================================================
+   @BUTTONS -> FAUX LINK
+   ====================================================================================== */
+/*
+	Make a button look like a link.
+
+	Styleguide Faux Link
+*/
+.btn--faux-link {
+  color: #52c884;
+}
+.btn--faux-link:hover, .btn--faux-link:focus {
+  opacity: 0.8;
+}
+
 /* Layout */
 /* ======================================================================================
    @IMPORT -> LAYOUT
@@ -4394,7 +4409,7 @@ body {
 /* ======================================================================================
    @LAYOUT -> SITE STRUCTURE -> GLOBAL -> SIDEBAR
    ====================================================================================== */
-.sidebar {
+.navigation {
   position: absolute;
   z-index: 2;
   width: 100%;
@@ -4402,7 +4417,7 @@ body {
   /* Screen media with width */
 }
 @media (min-width: 53.75em) {
-  .sidebar {
+  .navigation {
     width: 14rem;
     height: 100%;
   }

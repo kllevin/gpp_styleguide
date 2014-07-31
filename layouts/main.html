@@ -52,70 +52,62 @@
   <![endif]-->
   <!-- //Old IE banner -->
 
-  <header class="header container container--wide" role="banner">
-    <div class="container">
-      <div class="flag flag--shrink-wrap">
-        <div class="flag__img">
-          <!--{{> centre-brand}}-->
-          westfield labs
-        </div>
-        <div class="flag__body">
-          <button type="button" class="btn btn--faux-link toggle-visibility-btn" toggle-visibility="sidebar-toggle-visibility">
-            <span>Menu</span>
-          </button>
-        </div>
+  <header class="header" role="banner">
+    <div class="flag flag--shrink-wrap">
+      <div class="flag__img">
+        <!--{{> centre-brand}}-->
+        westfield labs
+      </div>
+      <div class="flag__body">
+        <button type="button" class="btn btn--faux-link toggle-visibility-btn" aria-owns="menu" toggle-visibility="menu">
+          <span>Menu</span>
+        </button>
       </div>
     </div>
   </header>
 
-  <!-- Sidebar -->
-  <div class="sidebar" id="sidebar-toggle-visibility js-toggle-visibility-target" role="">
-
-    <!-- Navigation -->
-    <nav class="" role="navigation">
-      <ul class="island-ends ">
-        <li class="islet-sides">
-          <button type="button" class="btn btn--faux-link" toggle-visibility="toggle-visibility-content">
-            Level One
-            <span class="show-when-visible show-when-visible--block">
-              <span class="hide-visually">closed</span>
-              <span aria-hidden="true" class="icon icon--arrow-up-full icon--lrg"></span>
-            </span>
-            <span class="hide-when-visible">
-              <span class="hide-visually">expanded</span>
-              <span aria-hidden="true" class="icon icon--arrow-down-full icon--lrg"></span>
-            </span>
-          </button>
-          <ul class="toggle-visibility is-active" id="toggle-visibility-content">
-            <li class="islet-sides">
-              <a href="#">Level Two - link</a>
-            </li>
-            <li class="islet-sides">
-              <button type="button" class="btn btn--faux-link" toggle-visibility="toggle-visibility-content">
-                Level Two
-                <span class="show-when-visible">
-                  <span class="hide-visually">closed</span>
-                  <span aria-hidden="true" class="icon icon--arrow-up-full icon--lrg"></span>
-                </span>
-                <span class="hide-when-visible">
-                  <span class="hide-visually">expanded</span>
-                  <span aria-hidden="true" class="icon icon--arrow-down-full icon--lrg"></span>
-                </span>
-              </button>
-              <ul class="toggle-visibility is-active" id="toggle-visibility-content">
-                <li class="islet-sides">
-                  <a href="#">Level Three</a>
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </li>
-      </ul>
-    </nav>
-    <!-- //Navigation -->
-
-  </div>
-  <!-- //Sidebar -->
+  <!-- Navigation -->
+  <nav class="navigation js-toggle-visibility-target" id="menu" role="navigation">
+    <ul class="island-ends ">
+      <li class="islet-sides">
+        <button type="button" class="btn btn--faux-link" toggle-visibility="toggle-visibility-content">
+          Level One
+          <span class="show-when-visible show-when-visible--block">
+            <span class="hide-visually">closed</span>
+            <span aria-hidden="true" class="icon icon--arrow-up-full icon--lrg"></span>
+          </span>
+          <span class="hide-when-visible">
+            <span class="hide-visually">expanded</span>
+            <span aria-hidden="true" class="icon icon--arrow-down-full icon--lrg"></span>
+          </span>
+        </button>
+        <ul class="toggle-visibility is-active" id="toggle-visibility-content">
+          <li class="islet-sides">
+            <a href="#">Level Two - link</a>
+          </li>
+          <li class="islet-sides">
+            <button type="button" class="btn btn--faux-link" toggle-visibility="toggle-visibility-content">
+              Level Two
+              <span class="show-when-visible">
+                <span class="hide-visually">closed</span>
+                <span aria-hidden="true" class="icon icon--arrow-up-full icon--lrg"></span>
+              </span>
+              <span class="hide-when-visible">
+                <span class="hide-visually">expanded</span>
+                <span aria-hidden="true" class="icon icon--arrow-down-full icon--lrg"></span>
+              </span>
+            </button>
+            <ul class="toggle-visibility is-active" id="toggle-visibility-content">
+              <li class="islet-sides">
+                <a href="#">Level Three</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+  <!-- //Navigation -->
 
   <!-- Main content -->
   <main id="main" class="main" role="main">
