@@ -1,0 +1,25 @@
+/* ======================================================================================
+   @ABSTRACTIONS -> DEFINITION LIST
+   ====================================================================================== */
+
+/*
+  Make the `dt` and `dd` elements of a definition list render side-by-side.
+
+  Styleguide Definition List
+*/
+
+.def-list__title {
+  float: left;
+  clear: left;
+  margin-right: to-em($spacing-quarter);
+
+  @include respond-min($lap-sml-middle) {
+    margin-right: 0;
+  }
+
+  &:after {content: ":";}
+}
+
+@include respond-min($non-palm) {
+  .def-list__desc {margin-left: to-em(115);}
+}

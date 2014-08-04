@@ -1,0 +1,50 @@
+/* ======================================================================================
+   @ABSTRACTIONS -> DIVIDER
+   ====================================================================================== */
+
+/*
+  Apply a dividing line between two elements.
+
+  .divider--btm             - Bottom divider
+  .divider--top             - Top divider
+  .divider--btm-mrg         - Bottom divider with base spacing
+  .divider--btm-mrg-dbl     - Bottom divider with double spacing
+  .divider--btm-mrg-half    - Bottom divider with half spacing
+  .divider--top-mrg         - Top divider with base spacing
+  .divider--top-mrg-dbl     - Top divider with double spacing
+  .divider--top-mrg-half    - Top divider with half spacing
+
+	Styleguide Divider
+*/
+
+.divider {
+  border-style: solid;
+  border-color: $color-divider-border;
+}
+
+/* Modifier: bottom */
+.divider--btm {border-bottom-width: 1px;}
+
+/* Modifier: bottom with base spacing */
+.divider--btm-mrg {@include to-rem(padding-bottom margin-bottom, $spacing-base);}
+
+/* Modifier: bottom with double spacing */
+.divider--btm-mrg-dbl {@include to-rem(padding-bottom margin-bottom, $spacing-dbl);}
+
+/* Modifier: bottom with half spacing */
+.divider--btm-mrg-half {@include to-rem(padding-bottom margin-bottom, $spacing-half);}
+
+/* Modifier: top */
+.divider--top {border-top-width: 1px;}
+
+/* Modifier: bottom with base spacing */
+.divider--top-mrg {@include to-rem(padding-top margin-top, $spacing-base);}
+
+/* Modifier: bottom with double spacing */
+.divider--top-mrg-dbl {@include to-rem(padding-top margin-top, $spacing-dbl);}
+
+/* Modifier: bottom with half spacing */
+.divider--top-mrg-half {@include to-rem(padding-top margin-top, $spacing-half);}
+
+/* Modifier: turn off for non JS users */
+.no-js .divider--off-no-js {border: 0;}

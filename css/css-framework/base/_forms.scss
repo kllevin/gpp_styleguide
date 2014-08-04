@@ -1,0 +1,141 @@
+/* ======================================================================================
+   @BASE -> FORMS
+   ====================================================================================== */
+
+/* Indicate that `label` will shift focus to the associated `input` element */
+label,
+.form-field__lbl--faux {cursor: pointer;}
+
+/* Override `content-box` from Normalize for search inputs */
+input[type="search"] {@include prefix(box-sizing, border-box);}
+
+/* Disabled state */
+
+/*
+  Note: it is okay to use `!important` here as we're doing it pre-emptively i.e. you know you will always want the rule it's applied too to take precedence.
+*/
+
+button[disabled],
+input[disabled],
+select[disabled],
+textarea[disabled],
+.is-disabled {
+  cursor: not-allowed !important;
+  text-shadow: none !important;
+  box-shadow: none !important;
+  opacity: 0.6 !important;
+}
+
+/* Modifier: prevent hover/focus states being applied */
+.is-disabled--no-hover {
+  color: inherit !important;
+  background: inherit !important;
+}
+
+/* 'Required field' indicator (asterisk) */
+.req-field {
+  font-family: Verdana, Geneva, sans-serif;
+  line-height: 1;
+  color: $color-feedback-error;
+  cursor: help;
+}
+
+/* Make these styles optional as they're quite opinionated */
+@if $form-base-styles == true {
+
+  /*
+    Text inputs via the `.txt-input` class, `textarea` and `select` (`select` only for non-touch as styling `select`s for the likes of iOS and Android is too inconsistent)
+  */
+  .txt-input,
+  textarea,
+  select {
+    color: $color-input-txt;
+    border-radius: $border-radius;
+    border: 1px solid $color-input-border;
+    background: $color-input-bg;
+    @extend %transition-subtle;
+
+    &:focus {border-color: $color-input-focus;}
+  }
+
+  .txt-input,
+  textarea,
+  select {
+    @include to-rem(padding, $spacing-half);
+
+    &:focus {outline: none;}
+  }
+
+  /* Remove top inner shadow from iOS devices */
+  .ios {
+    .txt-input,
+    textarea {-webkit-appearance: caret;}
+  }
+
+  textarea {resize: vertical;}
+
+  /* Fancy select */
+  .select-fancy {
+    width: 100%;
+
+    select {
+      @include to-rem(padding-bottom, $spacing-half - 1);
+
+      /* IE 9 */
+      .ie-9 & {@include to-rem(padding-bottom, $spacing-half - 2);}
+    }
+
+    .select-fancy__arrow {display: none;}
+
+    /* Apply the bling only for Webkit */
+    @include target-webkit {
+      position: relative;
+
+      /* The down arrow - uses an icon font */
+      .select-fancy__arrow {
+        pointer-events: none;
+        position: absolute;
+        @include to-rem(right, $spacing-half);
+        top: 50%;
+        @include translateY(-50%);
+        display: block;
+      }
+
+      /* Remove the default browser styling */
+      select {-webkit-appearance: none;}
+    }
+  }
+
+  /* Modifier: no text input bg */
+  .txt-input--no-bg {
+    background-color: transparent;
+    border-color: $color-grey-med;
+  }
+
+  /* Modifier: equal height of main button */
+  .txt-input--equal-height-btn {@include to-rem(padding-top padding-bottom, $spacing-half - 1);}
+
+  /* Placeholder */
+  @include input-placeholder {
+  	color: $color-grey-med;
+  	font-style: italic;
+  }
+
+  /* Firefox 19+ sets an opacity on placeholder text by default so we need to reset it */
+  ::-moz-placeholder {opacity: 1;}
+
+}/* endif */
+
+@if $disable-zooming-of-form-elements-on-ios-android == true {
+
+  /* Disable zooming of `input`s and `select`s for iOS/iPhone and Android when focused by setting to `16px`, turn this off if you're base font size is `16px` */
+  .iphone,
+  .android {
+    .txt-input,
+    textarea,
+    select {
+      &:focus {font-size: 16px;}
+    }
+  }
+
+}/* endif */

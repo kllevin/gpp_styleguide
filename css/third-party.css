@@ -1,0 +1,9 @@
+/* ======================================================================================
+   @THIRD-PARTY CSS
+   ====================================================================================== */
+
+/*
+  Usage: a stylesheet dedicated for back-end devs to house their quick-fix CSS when there's no time for a front-end dev to write the CSS.
+
+  Note: ideally the CSS in this stylesheet shouldn't make it into production rather it should be looked at and intergrated into the CSS architecture prior to that. This stylesheet should be linked too from the HTML Head *after* style.cssis so anything you put here should override all other CSS, if you're having trouble then use the sledgehammer: `!important`.
+*/

@@ -1,0 +1,37 @@
+/* ======================================================================================
+   @BUTTONS -> MAIN
+   ====================================================================================== */
+
+/*
+  The main buttons for the site.
+
+  .btn--main-dark         - Dark
+  .btn--main-compact      - Compact
+
+  Styleguide Button Main
+*/
+
+.btn--main {
+  line-height: normal;
+  @include to-em(padding, $spacing-half $spacing-base);
+  border-radius: $border-radius;
+  color: $color-white;
+
+  /* Bg colour combined with disabled state */
+  &,
+  &[disabled].btn,
+  &.is-disabled.btn {background-color: $color-btn-primary;}
+
+  &:hover,
+  &:focus {opacity: 0.8;}
+}
+
+/* Modifier: dark colour */
+.btn--main-dark {
+	&,
+	&[disabled].btn,
+	&.is-disabled.btn {background-color: $color-btn-secondary;}
+}
+
+/* Modifier: compact */
+.btn--compact {@include to-em(padding, $spacing-half);}

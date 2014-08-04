@@ -1,0 +1,88 @@
+@charset "UTF-8";
+
+/* ======================================================================================
+   @MASTER STYLESHEET
+   ====================================================================================== */
+
+/*
+  css-framework, being an OO framework, works in keeping with the open/closed principle. Any custom styles *SHOULD NOT* be added or modified in css-framework directly, but added in your project master stylesheet (this stylesheet) as per the open/closed principle: http://csswizardry.com/2012/06/the-open-closed-principle-applied-to-css. This also allows the framework to be updated seamlessly.
+
+  css-framework doesn't force a particular directory structure however we do recommend the structure below, and this is the structure the framework uses.
+
+  - FONTS...................contains all the project's non-system font files, if there are any.
+  - PARTIALS................all the styles!
+    - UTILS.................generic utility styles and Sass settings e.g. mixins.
+      - PLACEHOLDERS........placeholder selectors to keep things DRY.
+    - BASE..................base styles; unclassed HTML elements.
+    - BUTTONS...............you guessed it; all the buttons!
+    - LAYOUT................layout styles.
+      - GRID................you guessed it; the grid!
+      - SITE STRUCTURE......styles for pages and global site components.
+        - GLOBAL............style for global site components e.g. header/footer.
+        - PAGES.............style for pages, should be targetted by a `.page-[pagename]` class on the `body` element.
+    - ABSTRACTIONS..........very common patterns to be used 'as is' or built upon.
+    - MODULES...............discrete components of the page, this is the meat.
+      - WIDGETS ............more interactive rich requiring JavaScript/jQuery.
+    - HELPERS...............a bunch of classes to apply very common styles.
+    - PRINT.................global print styles (rest of print styles live inline).
+  - Third-party.............home for styles added by third parties and for housing nasty, hacky, quick-fix CSS, see: http://csswizardry.com/2013/04/shame-css/.
+*/
+
+/* [PROJECT-SPECIFIC VARIABLES]
+-------------------------------------------------------*/
+
+/*
+  Note: must be declared first in order to be used in the 'Framework Overrides' section below.
+ */
+
+//@import "partials/utils/vars";
+
+/* [OVERRIDES]
+-------------------------------------------------------*/
+
+/*
+  Note: any variables you find set in css-framework’ '_vars.scss' that you do not wish to keep, simply redefine here. This means that if css-framework, for example, sets your `$font-size` at `14px` and you wish it to be `16px`, simply redeclare it here, see example below. css-framework ignores its own variables in favour of using your own, so you can completely modify how css-framework works without ever having to alter the framework itself. Just make sure to declare your overrides here and do not use the `!default` keyword.
+*/
+
+//@import "overrides";
+
+/* [IMPORT THE FRAMEWORK]
+-------------------------------------------------------*/
+
+/*
+  Note: by default everything is imported. But if you want to be selective and you definitely should, so your CSS is as lean as possible, then import via groups e.g. Abstractions or at the individual partial level. If you only want specific partials then grab the relevant `@import` from the relevant file in 'css-framework/partials/imports' and update the path. If you're being selective then make sure to import in the correct order which is specified below.
+*/
+
+/* Utils */
+@import "css-framework/imports/utils";
+
+/* Base */
+@import "css-framework/imports/base";
+
+/* Buttons */
+@import "css-framework/buttons/base";
+@import "css-framework/buttons/main";
+@import "css-framework/buttons/faux-link";
+
+/* Layout */
+@import "css-framework/imports/layout";
+
+/* Abstractions */
+@import "css-framework/imports/abstractions";
+
+/* Modules */
+@import "css-framework/modules/icon";
+@import "css-framework/modules/feedback";
+
+/* Helpers */
+@import "css-framework/imports/helpers";
+
+/* Print */
+@import "css-framework/imports/print";
+
+/* [IMPORT YOUR PROJECT-SPECIFIC PARTIALS]
+-------------------------------------------------------*/
+
+/*
+  Note: see recommended partial directory structure above.
+*/

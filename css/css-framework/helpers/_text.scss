@@ -1,0 +1,69 @@
+/* ======================================================================================
+   @HELPERS -> TEXT
+   ====================================================================================== */
+
+/*
+	Various helpers specifically for text.
+*/
+
+/* Sizes */
+.txt-sml {@include font-size($font-size-sml, $sledgehammer: !important);}
+
+.txt-lrg {@include font-size($font-size-lrg, $sledgehammer: !important);}
+
+.txt-xlrg {@include font-size($font-size-xlrg, $sledgehammer: !important);}
+
+@include respond-min($non-palm) {
+  .txt-xlrg--non-palm {@include font-size($font-size-xlrg, $sledgehammer: !important);}
+}
+
+.txt-reset {font-size: 100% !important;}
+
+/* Alignments */
+.txt-center {text-align: center !important;}
+
+.txt-left {text-align: left !important;}
+
+.txt-right {text-align: right !important;}
+
+@include respond-min($non-palm) {
+  .txt-center--non-palm {text-align: center !important;}
+
+  .txt-left--non-palm {text-align: left !important;}
+
+  .txt-right--non-palm {text-align: right !important;}
+}
+
+/* Styles */
+.txt-italic {font-style: italic !important;}
+
+.txt-bold {font-weight: bold !important;}
+
+.txt-normal {font-weight: normal !important;}
+
+.txt-caps {text-transform: uppercase !important;}
+
+/* Truncate */
+.txt-truncate {
+  display: block !important;
+	max-width: 100% !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  white-space: nowrap !important;
+}
+
+/* Modifier: make `inline-block` */
+.txt-truncate--inline-block {display: inline-block !important;}
+
+/* Break word - should only be used for instances when it's only one string with no spaces such as email and url */
+.txt-break-word {
+	word-wrap: break-word !important;
+	-ms-word-break: break-all !important;
+  word-break: break-all !important;
+	/* Non standard for Webkit */
+  word-break: break-word !important;
+  /* Note: `table-layout: fixed;` is needen when this is used within tables, the rule needs to go on the `table` element */
+}
+
+/* Hyphenation */
+.txt-hyphenate {@include prefix(hyphens, auto);}
