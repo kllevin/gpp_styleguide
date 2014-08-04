@@ -52,32 +52,34 @@
   <![endif]-->
   <!-- //Old IE banner -->
 
-  <header class="header" role="banner">
-    <div class="flag flag--shrink-wrap">
+  <header class="header island-sides" role="banner">
+    <div class="flag">
       <div class="flag__img">
-        <!--{{> centre-brand}}-->
-        westfield labs
-      </div>
-      <div class="flag__body">
+        <div class="centre-brand inline-block">
+          <a href="/" rel="home">
+            <img alt="Go to home page" class="centre-brand__brand" src="../images/logo.svg">
+          </a>
+        </div>
         <button type="button" class="btn btn--faux-link toggle-visibility-btn" aria-owns="menu" toggle-visibility="menu">
           <span>Menu</span>
         </button>
+      </div>
+      <div class="flag__body txt-right">
+        <a href="login" class="">Log In</a>
       </div>
     </div>
   </header>
 
   <!-- Navigation -->
-  <nav class="navigation js-toggle-visibility-target" id="menu" role="navigation">
+  <nav class="navigation toggle-visibility js-toggle-visibility-target" id="menu" role="navigation">
     <ul class="island-ends ">
       <li class="islet-sides">
-        <button type="button" class="btn btn--faux-link" toggle-visibility="toggle-visibility-content">
+        <button type="button" class="btn btn--faux-link" toggle-visibility="toggle-visibility-content" toggle-visibility-drop-down="false">
           Level One
-          <span class="show-when-visible show-when-visible--block">
-            <span class="hide-visually">closed</span>
+          <span class="show-when-visible">
             <span aria-hidden="true" class="icon icon--arrow-up-full icon--lrg"></span>
           </span>
           <span class="hide-when-visible">
-            <span class="hide-visually">expanded</span>
             <span aria-hidden="true" class="icon icon--arrow-down-full icon--lrg"></span>
           </span>
         </button>
@@ -86,7 +88,7 @@
             <a href="#">Level Two - link</a>
           </li>
           <li class="islet-sides">
-            <button type="button" class="btn btn--faux-link" toggle-visibility="toggle-visibility-content">
+            <button type="button" class="btn btn--faux-link" toggle-visibility="toggle-visibility-content-2">
               Level Two
               <span class="show-when-visible">
                 <span class="hide-visually">closed</span>
@@ -97,7 +99,7 @@
                 <span aria-hidden="true" class="icon icon--arrow-down-full icon--lrg"></span>
               </span>
             </button>
-            <ul class="toggle-visibility is-active" id="toggle-visibility-content">
+            <ul class="toggle-visibility is-active" id="toggle-visibility-content-2">
               <li class="islet-sides">
                 <a href="#">Level Three</a>
               </li>
@@ -120,7 +122,7 @@
   <!-- Global JavaScript -->
   <!--<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>-->
   <script>window.jQuery || document.write('<script src="../js/vendor/jquery-2.1.1.min.js"><\/script>')</script>
-  <script src="../js/script.js"></script>
+  <script src="../js/test.js"></script>
   <!-- //Global JavaScript -->
 
 </html>

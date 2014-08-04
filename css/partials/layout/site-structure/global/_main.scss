@@ -5,5 +5,5 @@
   top: $header-height;
   left: 0;
 
-  @include respond-min($lap-lrg) {left: $sidebar-width;}
+  @include respond-min($non-palm) {left: $sidebar-width;}
 }

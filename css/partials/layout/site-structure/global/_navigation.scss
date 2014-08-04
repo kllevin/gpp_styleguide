@@ -1,5 +1,5 @@
 /* ======================================================================================
-   @LAYOUT -> SITE STRUCTURE -> GLOBAL -> SIDEBAR
+   @LAYOUT -> SITE STRUCTURE -> GLOBAL -> NAVIGATION
    ====================================================================================== */
 
 .navigation {
@@ -8,7 +8,8 @@
   width: 100%;
   background: $color-grey-dark;
 
-  @include respond-min($header-menu-breakpoint) {
+  @include respond-min($non-palm) {
+    display: block;
     width: $sidebar-width;
     height:100%;
   }
