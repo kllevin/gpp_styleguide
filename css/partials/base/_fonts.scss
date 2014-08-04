@@ -1,0 +1,18 @@
+/* ======================================================================================
+   @BASE -> FONTS
+   ====================================================================================== */
+
+/* All `@font-face` declarations here */
+
+/* [Icons]
+-------------------------------------------------------*/
+@font-face {
+  font-family: "icons";
+  src: url("./fonts/icons/expressparking.eot");
+  src: url("./fonts/icons/expressparking.eot#iefix") format('embedded-opentype'),
+       url("./fonts/icons/expressparking.woff") format('woff'),
+       url("./fonts/icons/expressparking.ttf") format('truetype'),
+       url("./fonts/icons/expressparking.svg#expressparking") format('svg');
+  font-weight: normal;
+  font-style: normal;
+}

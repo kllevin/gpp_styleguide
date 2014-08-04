@@ -1,0 +1,128 @@
+<!doctype html>
+<!--[if (IE 9) & (!IEMobile)]>    <html class="no-js ie-9" lang="en">    <![endif]-->
+<!--[if gt IE 8]><!-->            <html class="no-js" lang="en-au">      <!--<![endif]-->
+<head>
+  <!-- Replace `no-js` `html` hook with `js` hook -->
+  <script>
+    (function() {
+      var html = document.getElementsByTagName('html')[0]
+      html.className = html.className.replace( /(?:^|\s)no-js(?!\S)/g , 'js' );
+    })()
+  </script>
+  <!-- //Replace `no-js` `html` hook with `js` hook -->
+
+  <meta charset="utf-8">
+
+  <!-- Only use for responsive UI's -->
+  <meta name="viewport" content="initial-scale=1.0, width=device-width">
+  <!-- //Only use for responsive UI's -->
+
+  <!-- Prefetch DNS for external assets -->
+  <link rel="dns-prefetch" href="//fonts.googleapis.com">
+  <!-- //Prefetch DNS for external assets -->
+
+  <!-- Title -->
+  <title></title>
+  <!-- //Title -->
+
+  <!-- Google Fonts -->
+  <link href="http://fonts.googleapis.com/css?family=Lato:300|Open+Sans" rel="stylesheet">
+  <!-- //Google Fonts -->
+
+  <!-- Global CSS -->
+  <link href="../css/style.css" rel="stylesheet">
+  <!-- //Global CSS -->
+
+  <!-- IE 10+ tile icon: http://blogs.msdn.com/b/ie/archive/2012/06/08/high-quality-visuals-for-pinned-sites-in-windows-8.aspx -->
+  <meta name="msapplication-TileColor" content="#da291c">
+  <meta name="msapplication-TileImage" content="/apple-touch-icon-144x144-precomposed.png">
+  <!-- //IE 10+ tile icon -->
+
+</head>
+
+<body>
+
+  <!-- Skip link - make sure the main content element has `id="main"` -->
+  <a href="#main" class="hide-visually skip-link">Skip to main content</a>
+  <!-- //Skip link - make sure the main content element has `id="main"` -->
+
+  <!-- Old IE banner -->
+  <!--[if lte IE 8]>
+  <div class="old-ie-banner"><div class="old-ie-banner__inner"><div class="grid"><div class="grid__item two-fifths"><em class="h1">Your current browser is not supported</em><p>To get the best Westfield has to offer, you'll need to upgrade to a modern browser.</p><ul><li><a href="http://windows.microsoft.com/en-gb/internet-explorer/download-ie" target="_blank" rel="external"><img alt="Internet Explorer" height="40" src="/images/old-ie-banner/ie.png" width="40" />Internet<br>Explorer 9+</a></li><li><a href="https://www.google.com/intl/en/chrome/browser/" target="_blank" rel="external"><img alt="Chrome" height="40" src="/images/old-ie-banner/chrome.png" width="38" />Chrome</a></li><li><a href="https://www.mozilla.org/en-US/firefox/new/?utm_source=firefox-com&amp;utm_medium=referral" target="_blank" rel="external"><img alt="Firefox" height="40" src="/images/old-ie-banner/firefox.png" width="38" />Firefox</a></li><li><a href="http://support.apple.com/kb/DL1531" target="_blank" rel="external"><img alt="Safari" height="40" src="/images/old-ie-banner/safari.png" width="36" />Safari</a></li></ul></div><div class="grid__item three-fifths txt-right"><img alt="Screengrab of Westfield centre" height="254" src="/images/old-ie-banner/screengrab.jpg" width="600" /></div></div></div></div>
+  <![endif]-->
+  <!-- //Old IE banner -->
+
+  <header class="header island-sides" role="banner">
+    <div class="flag">
+      <div class="flag__img">
+        <div class="centre-brand inline-block">
+          <a href="/" rel="home">
+            <img alt="Go to home page" class="centre-brand__brand" src="../images/logo.svg">
+          </a>
+        </div>
+        <button type="button" class="btn btn--faux-link toggle-visibility-btn" aria-owns="menu" toggle-visibility="menu">
+          <span>Menu</span>
+        </button>
+      </div>
+      <div class="flag__body txt-right">
+        <a href="login" class="">Log In</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Navigation -->
+  <nav class="navigation toggle-visibility js-toggle-visibility-target" id="menu" role="navigation">
+    <ul class="island-ends ">
+      <li class="islet-sides">
+        <button type="button" class="btn btn--faux-link" toggle-visibility="toggle-visibility-content" toggle-visibility-drop-down="false">
+          Level One
+          <span class="show-when-visible">
+            <span aria-hidden="true" class="icon icon--arrow-up-full icon--lrg"></span>
+          </span>
+          <span class="hide-when-visible">
+            <span aria-hidden="true" class="icon icon--arrow-down-full icon--lrg"></span>
+          </span>
+        </button>
+        <ul class="toggle-visibility is-active" id="toggle-visibility-content">
+          <li class="islet-sides">
+            <a href="#">Level Two - link</a>
+          </li>
+          <li class="islet-sides">
+            <button type="button" class="btn btn--faux-link" toggle-visibility="toggle-visibility-content-2">
+              Level Two
+              <span class="show-when-visible">
+                <span class="hide-visually">closed</span>
+                <span aria-hidden="true" class="icon icon--arrow-up-full icon--lrg"></span>
+              </span>
+              <span class="hide-when-visible">
+                <span class="hide-visually">expanded</span>
+                <span aria-hidden="true" class="icon icon--arrow-down-full icon--lrg"></span>
+              </span>
+            </button>
+            <ul class="toggle-visibility is-active" id="toggle-visibility-content-2">
+              <li class="islet-sides">
+                <a href="#">Level Three</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+  <!-- //Navigation -->
+
+  <!-- Main content -->
+  <main id="main" class="main" role="main">
+  main content here
+  </main>
+  <!-- //Main content -->
+
+  <!-- Footer -->
+
+  <!-- Global JavaScript -->
+  <!--<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>-->
+  <script>window.jQuery || document.write('<script src="../js/vendor/jquery-2.1.1.min.js"><\/script>')</script>
+  <script src="../js/test.js"></script>
+  <!-- //Global JavaScript -->
+
+</html>

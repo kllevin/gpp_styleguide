@@ -1,0 +1,9 @@
+.main {
+  position: absolute;
+  z-index: 1;
+  overflow-y: auto;
+  top: $header-height;
+  left: 0;
+
+  @include respond-min($non-palm) {left: $sidebar-width;}
+}

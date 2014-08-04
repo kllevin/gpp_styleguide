@@ -35,7 +35,7 @@
   Note: must be declared first in order to be used in the 'Framework Overrides' section below.
  */
 
-//@import "partials/utils/vars";
+@import "partials/utils/vars";
 
 /* [OVERRIDES]
 -------------------------------------------------------*/
@@ -86,3 +86,17 @@
 /*
   Note: see recommended partial directory structure above.
 */
+
+/* Base */
+@import "partials/base/fonts";
+@import "partials/base/main";
+
+/* Layout */
+@import "partials/layout/containers";
+@import "partials/layout/site-structure/global/centre-brand";
+@import "partials/layout/site-structure/global/header";
+@import "partials/layout/site-structure/global/navigation";
+@import "partials/layout/site-structure/global/main";
+
+/* Modules */
+@import "partials/modules/icon";

@@ -1,0 +1,69 @@
+/* ======================================================================================
+   @MODULES -> ICON
+   ====================================================================================== */
+
+/*
+  Applies an icon font and nothing else (similar to the sprite module).
+*/
+
+/* Set icons */
+
+/*
+  Note: make sure to use the Unicode Private Use Area.
+*/
+
+.icon--arrow-down-full:before {content: "\e000";}
+
+.icon--arrow-up-full:before {content: "\e001";}
+
+.icon--arrow-left-full:before {content: "\e01d";}
+
+.icon--arrow-right-full:before {content: "\e01e";}
+
+.icon--arrow-right:before {content: "\e003";}
+
+.icon--arrow-left:before {content: "\e004";}
+
+.icon--arrow-left-long:before {content: "\e01f";}
+
+.icon--twitter:before {content: "\e009";}
+
+.icon--facebook:before {content: "\e00a";}
+
+.icon--pinterest:before {content: "\e00b";}
+
+.icon--google-plus:before {content: "\e00c";}
+
+.icon--instagram:before {content: "\e010";}
+
+.icon--youtube:before {content: "\e011";}
+
+.icon--wheelchair:before {content: "\e01b";}
+
+.icon--car:before {content: "\e01c";}
+
+.icon--file-pdf:before {content: "\e013";}
+
+.icon--file-history:before {content: "\e018";}
+
+.icon--location:before {content: "\e007";}
+
+.icon--mail:before {content: "\e008";}
+
+.icon--success:before {content: "\e00d";}
+
+.icon--close:before {content: "\e00e";}
+
+.icon--user:before {content: "\e00f";}
+
+.icon--ellipsis:before {content: "\e012";}
+
+.icon--signout:before {content: "\e014";}
+
+.icon--off:before {content: "\e015";}
+
+.icon--cog:before {content: "\e016";}
+
+.icon--refresh:before {content: "\e020";}
+
+.icon--screen:before {content: "\e021";}

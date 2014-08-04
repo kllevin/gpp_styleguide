@@ -30,6 +30,9 @@
 /*
   Note: must be declared first in order to be used in the 'Framework Overrides' section below.
  */
+/* ======================================================================================
+   @UTILS -> VARIABLES
+   ====================================================================================== */
 /* [OVERRIDES]
 -------------------------------------------------------*/
 /*
@@ -4350,3 +4353,227 @@ legend.hide-visually {
 /*
   Note: see recommended partial directory structure above.
 */
+/* Base */
+/* ======================================================================================
+   @BASE -> FONTS
+   ====================================================================================== */
+/* All `@font-face` declarations here */
+/* [Icons]
+-------------------------------------------------------*/
+@font-face {
+  font-family: "icons";
+  src: url("./fonts/icons/expressparking.eot");
+  src: url("./fonts/icons/expressparking.eot#iefix") format("embedded-opentype"), url("./fonts/icons/expressparking.woff") format("woff"), url("./fonts/icons/expressparking.ttf") format("truetype"), url("./fonts/icons/expressparking.svg#expressparking") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* ======================================================================================
+   @BASE -> MAIN
+   ====================================================================================== */
+body {
+  overflow: hidden;
+}
+
+/* Layout */
+/* ======================================================================================
+   @LAYOUT -> CONTAINERS
+   ====================================================================================== */
+/* Modifier: darkless */
+.container--dark-less {
+  background-color: #dfdfdf;
+}
+
+/* Modifier: light */
+.container--light {
+  background-color: white;
+}
+
+/* Modifier: dark */
+.container--dark {
+  background-color: black;
+}
+
+/* ======================================================================================
+   @LAYOUT -> SITE STRUCTURE -> GLOBAL -> CENTRE-BRAND
+   ====================================================================================== */
+/*
+  A small piece of UI that includes the Westfield logo and centre name, currently shared across the site header and footer. The main goal of these styles is to have each component horizontally aligned.
+*/
+/* Logo */
+.centre-brand__brand {
+  width: 150px;
+  height: 3.5rem;
+}
+
+/* The centre name */
+.centre-brand__centre {
+  font-size: 1.42857rem;
+  line-height: 1.05;
+  color: black;
+}
+
+/* ======================================================================================
+   @LAYOUT -> SITE STRUCTURE -> GLOBAL -> HEADER
+   ====================================================================================== */
+.header {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  background-color: #dfdfdf;
+}
+
+/* ======================================================================================
+   @LAYOUT -> SITE STRUCTURE -> GLOBAL -> NAVIGATION
+   ====================================================================================== */
+.navigation {
+  position: absolute;
+  z-index: 2;
+  width: 100%;
+  background: #242424;
+  /* Screen media with width */
+}
+@media (min-width: 40.0625em) {
+  .navigation {
+    display: block;
+    width: 14rem;
+    height: 100%;
+  }
+}
+
+.main {
+  position: absolute;
+  z-index: 1;
+  overflow-y: auto;
+  top: 3.5rem;
+  left: 0;
+  /* Screen media with width */
+}
+@media (min-width: 40.0625em) {
+  .main {
+    left: 14rem;
+  }
+}
+
+/* Modules */
+/* ======================================================================================
+   @MODULES -> ICON
+   ====================================================================================== */
+/*
+  Applies an icon font and nothing else (similar to the sprite module).
+*/
+/* Set icons */
+/*
+  Note: make sure to use the Unicode Private Use Area.
+*/
+.icon--arrow-down-full:before {
+  content: "\e000";
+}
+
+.icon--arrow-up-full:before {
+  content: "\e001";
+}
+
+.icon--arrow-left-full:before {
+  content: "\e01d";
+}
+
+.icon--arrow-right-full:before {
+  content: "\e01e";
+}
+
+.icon--arrow-right:before {
+  content: "\e003";
+}
+
+.icon--arrow-left:before {
+  content: "\e004";
+}
+
+.icon--arrow-left-long:before {
+  content: "\e01f";
+}
+
+.icon--twitter:before {
+  content: "\e009";
+}
+
+.icon--facebook:before {
+  content: "\e00a";
+}
+
+.icon--pinterest:before {
+  content: "\e00b";
+}
+
+.icon--google-plus:before {
+  content: "\e00c";
+}
+
+.icon--instagram:before {
+  content: "\e010";
+}
+
+.icon--youtube:before {
+  content: "\e011";
+}
+
+.icon--wheelchair:before {
+  content: "\e01b";
+}
+
+.icon--car:before {
+  content: "\e01c";
+}
+
+.icon--file-pdf:before {
+  content: "\e013";
+}
+
+.icon--file-history:before {
+  content: "\e018";
+}
+
+.icon--location:before {
+  content: "\e007";
+}
+
+.icon--mail:before {
+  content: "\e008";
+}
+
+.icon--success:before {
+  content: "\e00d";
+}
+
+.icon--close:before {
+  content: "\e00e";
+}
+
+.icon--user:before {
+  content: "\e00f";
+}
+
+.icon--ellipsis:before {
+  content: "\e012";
+}
+
+.icon--signout:before {
+  content: "\e014";
+}
+
+.icon--off:before {
+  content: "\e015";
+}
+
+.icon--cog:before {
+  content: "\e016";
+}
+
+.icon--refresh:before {
+  content: "\e020";
+}
+
+.icon--screen:before {
+  content: "\e021";
+}
