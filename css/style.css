@@ -4395,22 +4395,15 @@ body {
 }
 
 /* ======================================================================================
-   @LAYOUT -> SITE STRUCTURE -> GLOBAL -> CENTRE-BRAND
+   @LAYOUT -> SITE STRUCTURE -> GLOBAL -> BRAND
    ====================================================================================== */
 /*
-  A small piece of UI that includes the Westfield logo and centre name, currently shared across the site header and footer. The main goal of these styles is to have each component horizontally aligned.
-*/
+  A small piece of UI that includes the Westfield logo.
+
 /* Logo */
-.centre-brand__brand {
+.brand__brand {
   width: 150px;
   height: 3.5rem;
-}
-
-/* The centre name */
-.centre-brand__centre {
-  font-size: 1.42857rem;
-  line-height: 1.05;
-  color: black;
 }
 
 /* ======================================================================================
@@ -4421,6 +4414,11 @@ body {
   z-index: 2;
   width: 100%;
   background-color: #dfdfdf;
+}
+
+/* Nav single link */
+.header__nav__single {
+  border-left: 1px solid #242424;
 }
 
 /* ======================================================================================
