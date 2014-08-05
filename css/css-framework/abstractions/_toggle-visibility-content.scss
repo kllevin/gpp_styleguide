@@ -15,13 +15,13 @@
 .is-active {
 
   /* Show elements  */
-  .show-when-visible {display: inline;}
+  > .show-when-visible {display: inline;}
 
   /* Modifiers: different `display` properties */
-  .show-when-visible--block {display: block;}
+  > .show-when-visible--block {display: block;}
 
-  .show-when-visible--inline-block {display: inline-block;}
+  > .show-when-visible--inline-block {display: inline-block;}
 
   /* Hide elements */
-  .hide-when-visible {display: none;}
+  > .hide-when-visible {display: none;}
 }
