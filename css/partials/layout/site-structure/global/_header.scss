@@ -5,12 +5,8 @@
 .header {
   position: relative;
   z-index: 2;
-  width: 100%;
-  //height: $header-height;
-  background-color: $color-grey-light
+  background-color: $color-grey-light;
 }
 
   /* Nav single link */
-  .header__nav__single {
-    border-left: 1px solid $color-grey-dark;
-  }
+  .nav__single {border-left: 1px solid $color-grey-dark;}

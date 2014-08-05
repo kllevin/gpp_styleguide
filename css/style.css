@@ -3590,16 +3590,16 @@ th {
   /* Modifiers: different `display` properties */
   /* Hide elements */
 }
-.is-active .show-when-visible {
+.is-active > .show-when-visible {
   display: inline;
 }
-.is-active .show-when-visible--block {
+.is-active > .show-when-visible--block {
   display: block;
 }
-.is-active .show-when-visible--inline-block {
+.is-active > .show-when-visible--inline-block {
   display: inline-block;
 }
-.is-active .hide-when-visible {
+.is-active > .hide-when-visible {
   display: none;
 }
 
@@ -4379,19 +4379,19 @@ body {
 /* ======================================================================================
    @LAYOUT -> CONTAINERS
    ====================================================================================== */
-/* Modifier: darkless */
-.container--dark-less {
-  background-color: #dfdfdf;
-}
-
-/* Modifier: light */
-.container--light {
+/* Modifier: white */
+.container--white {
   background-color: white;
 }
 
-/* Modifier: dark */
-.container--dark {
+/* Modifier: black */
+.container--black {
   background-color: black;
+}
+
+/* Modifier: grey light */
+.container--grey-light {
+  background-color: #dfdfdf;
 }
 
 /* ======================================================================================
@@ -4403,7 +4403,6 @@ body {
 /* Logo */
 .brand__brand {
   width: 150px;
-  height: 3.5rem;
 }
 
 /* ======================================================================================
@@ -4412,44 +4411,48 @@ body {
 .header {
   position: relative;
   z-index: 2;
-  width: 100%;
   background-color: #dfdfdf;
 }
 
 /* Nav single link */
-.header__nav__single {
+.nav__single {
   border-left: 1px solid #242424;
 }
 
 /* ======================================================================================
    @LAYOUT -> SITE STRUCTURE -> GLOBAL -> NAVIGATION
    ====================================================================================== */
-.navigation {
+.nav {
   position: absolute;
   z-index: 2;
   width: 100%;
-  background: #242424;
+  background-color: #242424;
   /* Screen media with width */
 }
 @media (min-width: 40.0625em) {
-  .navigation {
-    display: block;
-    width: 14rem;
+  .nav {
+    width: 14.28571rem;
     height: 100%;
+    display: block;
   }
 }
 
+/* ======================================================================================
+   @LAYOUT -> SITE STRUCTURE -> GLOBAL -> MAIN
+   ====================================================================================== */
 .main {
   position: absolute;
   z-index: 1;
   overflow-y: auto;
-  top: 3.5rem;
+  top: 3.57143rem;
   left: 0;
+  right: 0;
+  bottom: 0;
   /* Screen media with width */
 }
 @media (min-width: 40.0625em) {
   .main {
-    left: 14rem;
+    left: 14.28571rem;
   }
 }
 

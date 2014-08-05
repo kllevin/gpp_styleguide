@@ -2,11 +2,11 @@
    @LAYOUT -> CONTAINERS
    ====================================================================================== */
 
-/* Modifier: darkless */
-.container--dark-less {background-color: $color-grey-light;}
+/* Modifier: white */
+.container--white {background-color: $color-white;}
 
-/* Modifier: light */
-.container--light {background-color: $color-white;}
+/* Modifier: black */
+.container--black {background-color: $color-black;}
 
-/* Modifier: dark */
-.container--dark {background-color: $color-black;}
+/* Modifier: grey light */
+.container--grey-light {background-color: $color-grey-light;}

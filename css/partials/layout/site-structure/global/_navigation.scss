@@ -2,15 +2,15 @@
    @LAYOUT -> SITE STRUCTURE -> GLOBAL -> NAVIGATION
    ====================================================================================== */
 
-.navigation {
+.nav {
   position: absolute;
   z-index: 2;
   width: 100%;
-  background: $color-grey-dark;
+  background-color: $color-grey-dark;
 
   @include respond-min($non-palm) {
-    display: block;
-    width: $sidebar-width;
-    height:100%;
+    @include to-rem(width, $sidebar-width);
+    height: 100%;
+    display:block;
   }
 }
